@@ -1,9 +1,90 @@
-*{
-    font-family: 'Russo One', sans-serif;
-    color: rgb(253, 253, 253);
+*, *:before, *:after{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Russo One', sans-serif;
+  color: rgb(253, 253, 253);
 }
+
 body{
     padding: 0%;
     margin: 0%;
     background-image: url(bg.gif) ;
 }
+
+/*| Navigation |*/
+
+nav{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
+  border: 1px solid rgba(0,0,0,.1);
+}
+.active, .active:hover{
+  color: hotpink;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+}
+  nav ul{
+    list-style: none;
+    position: relative;
+    float: right;
+    margin-right: 100px;
+    display: inline-table;
+  }
+nav ul li{
+      float: left;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+
+    nav ul li:hover{background: rgba(197, 187, 187, 0.301);}
+    nav ul li:hover > ul{display: block;}
+    nav ul li{
+      float: left;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+
+      nav ul li a{
+        display: block; 
+        padding: 30px 20px;
+        color: rgb(255, 255, 255); 
+        font-size: .9em;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      nav ul li a:hover{
+          text-decoration: none;
+          color: hotpink;
+      }
+      nav ul ul{
+        display: none;
+        background: rgb(0, 0, 0);
+        position: absolute; 
+        top: 100%;
+        z-index: 1;
+        box-shadow: -3px 3px 10px -2px rgba(0,0,0,.1);
+        border: 1px solid rgba(0,0,0,.1);
+      }
+        nav ul ul li{float: none; position: relative;}
+          nav ul ul li a {
+            padding: 15px 30px; 
+            border-bottom: 1px solid rgba(0,0,0,.05);
+          }
+          nav ul ul ul {
+            position: absolute; 
+            left: 100%; 
+            top:0;
+          }	
+
+
+

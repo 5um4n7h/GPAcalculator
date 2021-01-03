@@ -14,18 +14,62 @@
      <title>GPA Calculator</title>
 </head>
 <body>
-    <div id="heading" style="text-align: center;">
+
+
+
+    <nav role='navigation'>
+        <ul>
+          <li><a href="" class="active">Home</a></li>
+          <li><a href="#">Semester</a>
+            <ul>
+              <li><a href="">P Cycle</a></li>
+              <li><a href="">C Cycle</a></li>
+              <optgroup label="-------------------"></optgroup>
+              <li><a href="">3rd Sem</a></li>
+              <li><a href="">4th Sem</a></li>
+              <optgroup label="--------------"></optgroup>
+              <li><a href="">5th Sem</a></li>
+              <li><a href="">6th Sem</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </nav>  
+
+
+
+
+
+    <div id="heading" style="text-align:left; margin-left: 10%;">
         <h1>GPA Calculator</h1>
         <h3>(for VTU students)</h3>
     </div>
 
-    <hr><hr>
-    
-    
+
+<br><br>
+
+<h1 style="font-size: 4.5rem; text-align: center;">One Stop for All VTU's GPA Calculation!!!</h1>
+
+
+
+<br><br>
+<h2 style="text-align: center;">Select Your Semester for SGPA Calculation--></h2>
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="container">
             <div class="row">
-                <div class="col-md-4 offset-md-4 form-div">
-                <form>
+                <div class="col-md-5 offset-md-4 form-div">
+                <form style="background: black ;">
                     <h3 class="text-center">5th SEM GPA Calculator</h3>
                     <div class="form-group">
                     <label>18CS51</label>
@@ -65,13 +109,14 @@
                     </div>
 
                     <div class="form-group">
-                        <label>total SGPA: </label>
-                        <output id="result"></output>
+                        <h1><label>SGPA: </label>
+                        <output id="result"></output></h1>
                     </div>
                 </form> 
             </div>  
         </div>
     </div>
+
     <script type="text/javascript" src="main.js"></script>
     
 </body>
