@@ -11,7 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
     <!-- Bootstrap core CSS -->
      <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-     <title>GPA Calculator</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <title>GPA Calculator</title>
 </head>
 <body>
 
@@ -19,20 +20,20 @@
 
     <nav role='navigation'>
         <ul>
-          <li><a href="" class="active">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="#">Semester</a>
             <ul>
-              <li><a href="">P Cycle</a></li>
-              <li><a href="">C Cycle</a></li>
-              <optgroup label="-------------------"></optgroup>
-              <li><a href="">3rd Sem</a></li>
-              <li><a href="">4th Sem</a></li>
-              <optgroup label="--------------"></optgroup>
-              <li><a href="">5th Sem</a></li>
-              <li><a href="">6th Sem</a></li>
+              <li><a href="pcycle.html">P Cycle</a></li>
+              <li><a href="ccycle.html">C Cycle</a></li>
+              
+              <li><a href="third.html">3rd Sem</a></li>
+              <li><a href="fourth.html">4th Sem</a></li>
+              
+              <li><a href="fifth.html">5th Sem</a></li>
+              <li><a href="sixth.html">6th Sem</a></li>
             </ul>
           </li>
-          <li><a href="#">Contact us</a></li>
+          <li><a href="CGPA.html">CGPA</a></li>
         </ul>
       </nav>  
 
@@ -41,83 +42,56 @@
 
 
     <div id="heading" style="text-align:left; margin-left: 10%;">
-        <h1>GPA Calculator</h1>
+        <h1 href="index.html">GPA Calculator</h1>
         <h3>(for VTU students)</h3>
     </div>
 
 
 <br><br>
 
-<h1 style="font-size: 4.5rem; text-align: center;">One Stop for All VTU's GPA Calculation!!!</h1>
+<h1 style="font-size: 4.5rem; text-align: center;">One Stop for All Semester's GPA Calculation!!!</h1>
 
 
 
 <br><br>
-<h2 style="text-align: center;">Select Your Semester for SGPA Calculation--></h2>
+<h2 style="text-align: center;">Select Your Semester for SGPA Calculation</h2>
+<img src="images/arrow_down.png" alt="arrow_down" style="margin-left: 50%;">
 
 
 
+<div class="sem-btns col-md-10 offset-md-2">
+  <span class="btns" onclick="redirectIt(this)" href="pcycle.html">
+    <a class="btn" href="pcycle.html">P Cycle</a>
+  </span>
+  <span class="btns" onclick="redirectIt(this)" href="ccycle.html">
+    <a class="btn" href="ccycle.html">C Cycle</a>
+  </span>
+  <span class="btns" onclick="redirectIt(this)" href="third.html">
+    <a class="btn" href="third.html">3rd Sem</a>
+  </span>
+  
+  <span class="btns" onclick="redirectIt(this)" href="fourth.html">
+    <a class="btn" href="fourth.html">4th Sem</a>
+  </span>
+  <span class="btns" onclick="redirectIt(this)" href="fifth.html">
+    <a class="btn" href="fifth.html">5th Sem</a>
+  </span>
+  <span class="btns" onclick="redirectIt(this)" href="sixth.html">
+    <a class="btn" href="sixth.html" >6th Sem</a>
+  </span>
+</div>
 
-
-
-
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 offset-md-4 form-div">
-                <form style="background: black ;">
-                    <h3 class="text-center">5th SEM GPA Calculator</h3>
-                    <div class="form-group">
-                    <label>18CS51</label>
-                    <input type="number" id="cs51" class="input form-control form-control-lg">
-                    </div>
-                    <div class="form-group">
-                    <label>18CS52</label>
-                    <input type="number" id="cs52" class="input form-control form-control-lg">
-                    </div>
-                    <div class="form-group">
-                    <label>18CS53</label>
-                    <input type="number" id="cs53" class="input form-control form-control-lg">
-                    </div>
-                    <div class="form-group">
-                    <label>18CS54</label>
-                    <input type="number" id="cs54" class="input form-control form-control-lg">
-                    </div>
-                    <div class="form-group">
-                    <label>18CS55</label>
-                    <input type="number" id="cs55" class="input form-control form-control-lg">
-                    </div>
-                    <div class="form-group">
-                    <label>18CS56</label>
-                    <input type="number" id="cs56" class="input form-control form-control-lg">
-                    </div>
-                    <div class="form-group">
-                    <label>18CSL57</label>
-                    <input type="number" id="cs57" class="input form-control form-control-lg">
-                    </div>
-                    <div class="form-group">
-                    <label>18CSL58</label>
-                    <input type="number" id="cs58" class="input form-control form-control-lg">
-                    </div>
-                    <div class="form-group">
-                    <label>18CIV59</label>
-                    <input type="number" id="cs59" class="input form-control form-control-lg">
-                    </div>
-
-                    <div class="form-group">
-                        <h1><label>SGPA: </label>
-                        <output id="result"></output></h1>
-                    </div>
-                </form> 
-            </div>  
-        </div>
-    </div>
+<footer class="footer">
+  Feel free to reach out: nirmalj989@gmail.com
+</footer>
 
     <script type="text/javascript" src="main.js"></script>
+    <script>
+      function redirectIt(obj){
+    var goToLink = obj.getAttribute("href");
+    window.location.href=goToLink;
+}
+    </script>
     
 </body>
 

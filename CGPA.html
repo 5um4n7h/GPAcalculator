@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    <!-- Bootstrap core CSS -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+			<title>CGPA Calculator</title>
+      
+</head>
+<body>
+
+
+	
+    <nav role='navigation'>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Semester</a>
+            <ul>
+              <li><a href="pcycle.html">P Cycle</a></li>
+              <li><a href="ccycle.html">C Cycle</a></li>
+              
+              <li><a href="third.html">3rd Sem</a></li>
+              <li><a href="fourth.html">4th Sem</a></li>
+              
+              <li><a href="fifth.html">5th Sem</a></li>
+              <li><a href="sixth.html">6th Sem</a></li>
+            </ul>
+          </li>
+          <li><a href="CGPA.html" class="active">CGPA</a></li>
+        </ul>
+      </nav>  
+
+
+
+	  <div id="heading" style="text-align:left; margin-left: 10%;">
+        <h1 href="index.html">GPA Calculator</h1>
+        <h3>(for VTU students)</h3>
+    </div>
+
+    <br><br>
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 offset-md-4 form-div">
+            <form style="background: black ;">
+                <h3 class="text-center">CGPA Calculator</h3>
+                <div class="form-group">
+                <label>Semester 1</label>
+                <input type="number" id="sem1" class="input form-control form-control-lg" placeholder="Enter Your SGPA">
+                </div>
+                <div class="form-group">
+                <label>Semester 2</label>
+                <input type="number" id="sem2" class="input form-control form-control-lg" placeholder="Enter Your SGPA">
+                </div>
+                <div class="form-group">
+                <label>Semester 3</label>
+                <input type="number" id="sem3" class="input form-control form-control-lg" placeholder="Enter Your SGPA">
+                </div>
+                <div class="form-group">
+                <label>Semester 4</label>
+                <input type="number" id="sem4" class="input form-control form-control-lg" placeholder="Enter Your SGPA">
+                </div>
+                <div class="form-group">
+                <label>Semester 5</label>
+                <input type="number" id="sem5" class="input form-control form-control-lg" placeholder="Enter Your SGPA">
+                </div>
+                <div class="form-group">
+                <label>Semester 6</label>
+                <input type="number" id="sem6" class="input form-control form-control-lg" placeholder="Enter Your SGPA">
+                </div>
+                <div class="form-group">
+                <label>Semester 7</label>
+                <input type="number" id="sem7" class="input form-control form-control-lg" placeholder="Enter Your SGPA">
+                </div>
+                <div class="form-group">
+                <label>Semester 8</label>
+                <input type="number" id="sem8" class="input form-control form-control-lg" placeholder="Enter Your SGPA">
+                </div>
+                
+                <div class="form-group">
+                    <h1><label>CGPA: </label>
+                    <output id="result"></output></h1>
+                </div>
+            </form> 
+        </div>  
+    </div>
+</div>
+<footer class="footer">
+  Feel free to reach out: nirmalj989@gmail.com
+</footer>
+
+<script type="text/javascript">
+    $(".input").on('input',function(){
+
+        var x1= document.getElementById('sem1').value;
+        x1 = parseFloat(x1);
+
+        var x2= document.getElementById('sem2').value;
+        x2 = parseFloat(x2);
+
+        var x3= document.getElementById('sem3').value;
+        x3 = parseFloat(x3);
+
+        var x4= document.getElementById('sem4').value;
+        x4 = parseFloat(x4);
+
+        var x5= document.getElementById('sem5').value;
+        x5 = parseFloat(x5);
+
+        var x6= document.getElementById('sem6').value;
+        x6 = parseFloat(x6);
+
+        var x7= document.getElementById('sem7').value;
+        x7 = parseFloat(x7);
+
+        var x8= document.getElementById('sem8').value;
+        x8 = parseFloat(x8);
+
+      
+        if(Number.isNaN(x1))
+        x1 = 0;
+        if(Number.isNaN(x2))
+        x2=0;
+        if(Number.isNaN(x3))
+        x3=0;
+        if(Number.isNaN(x4))
+        x4=0;
+        if(Number.isNaN(x5))
+        x5=0;
+        if(Number.isNaN(x6))
+        x6=0;
+        if(Number.isNaN(x7))
+        x7=0;
+        if(Number.isNaN(x8))
+        x8=0;
+        
+
+
+        var credit1=20;
+        var credit2=20;
+        var credit3=24;
+        var credit4=24;
+        var credit5=24;
+        var credit6=25;
+        var credit7=25;
+        var credit8=25;
+        
+        var credit=credit1+credit2+credit3+credit4+credit5+credit6+credit7+credit8;
+
+        document.getElementById('result').value=((x1*credit1)+(x2*credit2)+(x3*credit3)+(x4*credit4)+(x5*credit5)+(x6*credit6)+(x7*credit7)+(x8*credit8))/credit;
+
+        });
+</script>
+</body>
+

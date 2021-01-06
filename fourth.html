@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="main.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    <!-- Bootstrap core CSS -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+     <title>5th Sem-SGPA Calculation</title>
+</head>
+<body>
+
+
+
+    
+    <nav role='navigation'>
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="#">Semester</a>
+            <ul>
+              <li><a href="pcycle.html">P Cycle</a></li>
+              <li><a href="ccycle.html">C Cycle</a></li>
+              
+              <li><a href="third.html">3rd Sem</a></li>
+              <li><a href="fourth.html" class="active">4th Sem</a></li>
+              
+              <li><a href="fifth.html" >5th Sem</a></li>
+              <li><a href="sixth.html">6th Sem</a></li>
+            </ul>
+          </li>
+          <li><a href="CGPA.html">CGPA</a></li>
+        </ul>
+      </nav>  
+
+
+
+
+
+    <div id="heading" style="text-align:left; margin-left: 10%;">
+        <h1 href="index.html">GPA Calculator</h1>
+        <h3>(for VTU students)</h3>
+    </div>
+
+
+<br><br>
+
+
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 offset-md-4 form-div">
+                <form style="background: black ;">
+                    <h3 class="text-center">4th SEM GPA Calculator</h3>
+                    <div class="form-group">
+                    <label>18MAT41</label>
+                    <input type="number" id="cs51" class="input form-control form-control-lg" placeholder="Enter Your Marks">
+                    </div>
+                    <div class="form-group">
+                    <label>18**42</label>
+                    <input type="number" id="cs52" class="input form-control form-control-lg" placeholder="Enter Your Marks">
+                    </div>
+                    <div class="form-group">
+                    <label>18**43</label>
+                    <input type="number" id="cs53" class="input form-control form-control-lg" placeholder="Enter Your Marks">
+                    </div>
+                    <div class="form-group">
+                    <label>18**44</label>
+                    <input type="number" id="cs54" class="input form-control form-control-lg" placeholder="Enter Your Marks">
+                    </div>
+                    <div class="form-group">
+                    <label>18**45</label>
+                    <input type="number" id="cs55" class="input form-control form-control-lg" placeholder="Enter Your Marks">
+                    </div>
+                    <div class="form-group">
+                    <label>18**46</label>
+                    <input type="number" id="cs56" class="input form-control form-control-lg" placeholder="Enter Your Marks">
+                    </div>
+                    <div class="form-group">
+                    <label>18**L47</label>
+                    <input type="number" id="cs57" class="input form-control form-control-lg" placeholder="Enter Your Marks">
+                    </div>
+                    <div class="form-group">
+                    <label>18**L48</label>
+                    <input type="number" id="cs58" class="input form-control form-control-lg" placeholder="Enter Your Marks">
+                    </div>
+                    <div class="form-group">
+                    <label>18(KAK/KVK)49/18CPC49</label>
+                    <input type="number" id="cs59" class="input form-control form-control-lg" placeholder="Enter Your Marks">
+                    </div>
+
+                    <div class="form-group">
+                        <h1><label>SGPA: </label>
+                        <output id="result"></output></h1>
+                    </div>
+                </form> 
+            </div>  
+        </div>
+    </div>
+    <footer class="footer">
+        Feel free to reach out: nirmalj989@gmail.com
+      </footer>
+
+    <script>
+        $(".input").on('input',function(){
+
+            var x1= document.getElementById('cs51').value;
+            x1 = parseInt((x1/10)+1);
+
+            var x2= document.getElementById('cs52').value;
+            x2 = parseInt((x2/10)+1);
+
+            var x3= document.getElementById('cs53').value;
+            x3 = parseInt((x3/10)+1);
+
+            var x4= document.getElementById('cs54').value;
+            x4 = parseInt((x4/10)+1);
+
+            var x5= document.getElementById('cs55').value;
+            x5 = parseInt((x5/10)+1);
+
+            var x6= document.getElementById('cs56').value;
+            x6 = parseInt((x6/10)+1);
+
+            var x7= document.getElementById('cs57').value;
+            x7 = parseInt((x7/10)+1);
+
+            var x8= document.getElementById('cs58').value;
+            x8 = parseInt((x8/10)+1);
+
+            var x9= document.getElementById('cs59').value;
+            x9 = parseInt((x9/10)+1);
+
+            if(Number.isNaN(x1))
+            x1 = 0;
+            if(Number.isNaN(x2))
+            x2=0;
+            if(Number.isNaN(x3))
+            x3=0;
+            if(Number.isNaN(x4))
+            x4=0;
+            if(Number.isNaN(x5))
+            x5=0;
+            if(Number.isNaN(x6))
+            x6=0;
+            if(Number.isNaN(x7))
+            x7=0;
+            if(Number.isNaN(x8))
+            x8=0;
+            if(Number.isNaN(x9))
+            x9 = 0;
+
+
+            var cs51=3;
+            var cs52=4;
+            var cs53=3;
+            var cs54=3;
+            var cs55=3;
+            var cs56=3;
+            var cs57=2;
+            var cs58=2;
+            var cs59=1;
+            var cs5=cs51+cs52+cs53+cs54+cs55+cs56+cs57+cs58+cs59;
+
+            document.getElementById('result').value=((x1*cs51)+(x2*cs52)+(x3*cs53)+(x4*cs54)+(x5*cs55)+(x6*cs56)+(x7*cs57)+(x8*cs58)+(x9*cs59))/cs5;
+
+            });
+    </script>
+</body>
+

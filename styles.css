@@ -11,7 +11,7 @@
 body{
     padding: 0%;
     margin: 0%;
-    background-image: url(bg.gif) ;
+    background-image: url(images/bg.gif) ;
 }
 
 /*| Navigation |*/
@@ -86,5 +86,42 @@ nav ul li{
             top:0;
           }	
 
+.sem-btns{
+  position: relative;
+  display: block;
+  
+}
 
+.btn{
+  margin: 5%;
+  
+}
 
+.btns{
+  margin: 5%;
+  background-color: hotpink;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 7%;
+  color: white;
+  cursor: pointer;
+}
+
+ .btns:hover{
+  background-color: white;
+  color: black;
+
+}
+.btn:hover{
+  color: black;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+}
